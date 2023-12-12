@@ -17,6 +17,7 @@ import {
 import { IoMan, IoSchool, IoSchoolOutline, IoSettings } from "react-icons/io5";
 import "./Dashboard.css";
 import getallStudents from "./Api";
+import deleteStudentData from "./DeleteStudentDataApi";
 
 export default function Dashboard() {
   const [student, setSutdent] = useState([]);
@@ -76,10 +77,11 @@ export default function Dashboard() {
       <Container className="mt-4">
         <Row>
           <Col sm="12">
-            <a href="/creatStudent"></a>
-            <Button className="btn">
-              <span className="font-size-l">Create New Student</span>
-            </Button>
+            <a href="/createStu">
+              <Button className="btn">
+                <span className="font-size-l">Create New Student</span>
+              </Button>
+            </a>
           </Col>
         </Row>
       </Container>
@@ -97,15 +99,15 @@ export default function Dashboard() {
                   <CardBody>
                     <Row>
                       <Col sm="4" className="text-center">
-                        <span style={{fontWeight:'600'}}>Class : </span>
+                        <span style={{ fontWeight: "600" }}>Class : </span>
                         <span>Second Year</span>
                       </Col>
                       <Col sm="4" className="text-center">
-                        <span style={{fontWeight:'600'}}>Age : </span>
+                        <span style={{ fontWeight: "600" }}>Age : </span>
                         <span>{students.age}</span>
                       </Col>
                       <Col sm="4" className="text-center">
-                        <span style={{fontWeight:'600'}}>Teacher : </span>
+                        <span style={{ fontWeight: "600" }}>Teacher : </span>
                         <span>{students.teacher}</span>
                       </Col>
                     </Row>
@@ -116,7 +118,9 @@ export default function Dashboard() {
                         <Button>Edit</Button>
                       </Col>
                       <Col sm="6">
-                        <Button>Delete</Button>
+                        <Button onClick={() => deleteStudentData(students.id)}>
+                          Delete
+                        </Button>
                       </Col>
                     </Row>
                   </CardFooter>
