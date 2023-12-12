@@ -10,14 +10,14 @@ import {
   CardTitle,
   Col,
   Container,
-  Navbar,
-  NavbarBrand,
   Row,
 } from "react-bootstrap";
-import { IoMan, IoSchool, IoSchoolOutline, IoSettings } from "react-icons/io5";
+import { IoMan, IoSchool, IoSettings } from "react-icons/io5";
 import "./Dashboard.css";
 import getallStudents from "./Api";
 import deleteStudentData from "./DeleteStudentDataApi";
+import Header from "./Navbar";
+
 
 export default function Dashboard() {
   const [student, setSutdent] = useState([]);
@@ -27,12 +27,7 @@ export default function Dashboard() {
   }, []);
   return (
     <>
-      <Navbar bg="dark" light mb-2>
-        <NavbarBrand className="text-white">
-          <IoSchoolOutline className="font-size-xxl" />
-          <span className="font-size-l ml-3">School Manager Application</span>
-        </NavbarBrand>
-      </Navbar>
+      <Header />
       <Container className="mt-3">
         <Row>
           <Col sm="4">

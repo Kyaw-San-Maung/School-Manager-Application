@@ -1,26 +1,38 @@
-.font-size-xxl{
-    font-size: 3em;
-  }
-  
-  .font-size-xl{
-    font-size: 2em;
-  }
-  
-  .font-size-l{
-    font-size: 1.5em;
-  }
-  
-  .font-size-m{
-    font-size: 1em;
-  }
-  
-  .btn{
-    background-color: #282c34;
-    border: none;
-    width: 100%;
-  }
-  .btn:hover{
-    border: 1px solid #282c34;
-    background-color: white;
-    color: #282c34;
-  }
+.font-size-xxl {
+  font-size: 3em;
+}
+
+.font-size-xl {
+  font-size: 2em;
+}
+
+.font-size-l {
+  font-size: 1.5em;
+}
+
+.font-size-m {
+  font-size: 1em;
+}
+
+.btn {
+  background-color: #27bf27;
+  border: none;
+  color: white;
+  width: 100%;
+}
+.btn:hover {
+  border: 1px solid #282c34;
+  background-color: white;
+  color: #282c34;
+}
+
+.navbar {
+  box-shadow: 1px 11px 5px -3px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 1px 11px 5px -3px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 1px 11px 5px -3px rgba(0, 0, 0, 0.18);
+  margin-bottom: 3rem;
+}
+
+.addstu-form{
+  margin: 7rem;
+}
