@@ -76,6 +76,7 @@ export default function Dashboard() {
       <Container className="mt-4">
         <Row>
           <Col sm="12">
+            <a href="/creatStudent"></a>
             <Button className="btn">
               <span className="font-size-l">Create New Student</span>
             </Button>
