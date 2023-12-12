@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-icons/io5";
 import {
@@ -14,9 +14,14 @@ import {
 } from "react-bootstrap";
 import { IoMan, IoSchool, IoSchoolOutline, IoSettings } from "react-icons/io5";
 import "./Dashboard.css";
+import getallStudents from "./Api";
 
 export default function Dashboard() {
-    const [student, setSutdent] = useState([]);
+  const [student, setSutdent] = useState([]);
+
+  useEffect(() => {
+    getallStudents().then((res) => setSutdent(res.data));
+  }, []);
   return (
     <>
       <Navbar bg="dark" light mb-2>
@@ -74,11 +79,21 @@ export default function Dashboard() {
             </Button>
           </Col>
         </Row>
-          </Container>
-          
-          <Container className="mt-4">
-              
-          </Container>
+      </Container>
+
+      <Container className="mt-4">
+        {student.map((students) => {
+          return (
+            <Row className="mt-4">
+          <Col sm="12">
+            <Card body>
+              <IoMan className="font-size-xl" /> {students.firstName + " " + students.lastName}
+            </Card>
+          </Col>
+        </Row>
+          )
+        })}
+      </Container>
     </>
   );
 }
