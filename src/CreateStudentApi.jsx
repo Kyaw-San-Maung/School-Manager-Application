@@ -1,8 +1,8 @@
-import React from 'react'
+import axios from 'axios'
+
 
 const api_url = "http://localhost:8080/create"
-export default function CreateStudentApi() {
-  return (
-    <div>CreateStudentApi</div>
-  )
+export default function CreateStudentApi(studentInfo) {
+  return axios.post(api_url, studentInfo);
+  
 }

@@ -93,17 +93,21 @@ export default function Dashboard() {
                   </CardTitle>
                   <CardBody>
                     <Row>
-                      <Col sm="4" className="text-center">
+                      <Col sm="3" className="text-center">
                         <span style={{ fontWeight: "600" }}>Class : </span>
                         <span>Second Year</span>
                       </Col>
-                      <Col sm="4" className="text-center">
+                      <Col sm="3" className="text-center">
                         <span style={{ fontWeight: "600" }}>Age : </span>
                         <span>{students.age}</span>
                       </Col>
-                      <Col sm="4" className="text-center">
+                      <Col sm="3" className="text-center">
                         <span style={{ fontWeight: "600" }}>Teacher : </span>
                         <span>{students.teacher}</span>
+                      </Col>
+                      <Col sm="3" className="text-center">
+                        <span style={{ fontWeight: "600" }}>Student ID : </span>
+                        <span>{students.id}</span>
                       </Col>
                     </Row>
                   </CardBody>
