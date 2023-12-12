@@ -4,6 +4,8 @@ import "react-icons/io5";
 import {
   Button,
   Card,
+  CardBody,
+  CardFooter,
   CardText,
   CardTitle,
   Col,
@@ -85,13 +87,42 @@ export default function Dashboard() {
         {student.map((students) => {
           return (
             <Row className="mt-4">
-          <Col sm="12">
-            <Card body>
-              <IoMan className="font-size-xl" /> {students.firstName + " " + students.lastName}
-            </Card>
-          </Col>
-        </Row>
-          )
+              <Col sm="12">
+                <Card body>
+                  <CardTitle tag="h5">
+                    <IoMan className="font-size-xl" />{" "}
+                    {students.firstName + " " + students.lastName}
+                  </CardTitle>
+                  <CardBody>
+                    <Row>
+                      <Col sm="4" className="text-center">
+                        <span style={{fontWeight:'600'}}>Class : </span>
+                        <span>Second Year</span>
+                      </Col>
+                      <Col sm="4" className="text-center">
+                        <span style={{fontWeight:'600'}}>Age : </span>
+                        <span>{students.age}</span>
+                      </Col>
+                      <Col sm="4" className="text-center">
+                        <span style={{fontWeight:'600'}}>Teacher : </span>
+                        <span>{students.teacher}</span>
+                      </Col>
+                    </Row>
+                  </CardBody>
+                  <CardFooter>
+                    <Row>
+                      <Col sm="6">
+                        <Button>Edit</Button>
+                      </Col>
+                      <Col sm="6">
+                        <Button>Delete</Button>
+                      </Col>
+                    </Row>
+                  </CardFooter>
+                </Card>
+              </Col>
+            </Row>
+          );
         })}
       </Container>
     </>
