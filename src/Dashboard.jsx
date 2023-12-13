@@ -20,6 +20,9 @@ import Header from "./Navbar";
 import EditStudent from "./EditStudent";
 
 
+
+
+
 export default function Dashboard() {
   const [student, setSutdent] = useState([]);
 
@@ -116,7 +119,7 @@ export default function Dashboard() {
                     <Row>
                       <Col sm="6">
                         <a href="editStu">
-                        <Button onClick={() => EditStudent(students.id)}>Edit</Button>
+                          <Button onClick={() => EditStudent(students.id) }>Edit</Button>
                         </a>
                       </Col>
                       <Col sm="6">
