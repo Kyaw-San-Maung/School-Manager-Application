@@ -3,12 +3,11 @@ import { useState } from "react";
 import Header from "./Navbar";
 import EditStudentApi from "./EditStudentApi";
 
-export default function EditStudent() {
-
+export default function EditStudent(id) {
     const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState("");
-  const [teacher, setTeacher] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [age, setAge] = useState("");
+    const [teacher, setTeacher] = useState("");
 
   const FirstNameChg = (e) => {
     setFirstName(e.target.value)
@@ -29,14 +28,14 @@ export default function EditStudent() {
   const EditStudent = (e) => {
     e.preventDefault();
 
-    const stuInfo = {
+    const studentUpdateInfo = {
       firstName: firstName,
       lastName: lastName,
       age: age,
       teacher: teacher
     }
 
-      EditStudentApi(stuInfo);
+      EditStudentApi(id , studentUpdateInfo);
   }
     return (
       <>
