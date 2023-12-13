@@ -31,6 +31,11 @@ export default function Header() {
                 Add Student
               </a>
             </li>
+            <li class="nav-item font-size-m">
+              <a class="nav-link active" aria-current="page" href="editStu">
+                Update Student
+              </a>
+            </li>
           </ul>
           <form class="d-flex" role="search">
             <input

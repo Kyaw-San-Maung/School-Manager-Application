@@ -17,6 +17,7 @@ import "./Dashboard.css";
 import getallStudents from "./Api";
 import deleteStudentData from "./DeleteStudentDataApi";
 import Header from "./Navbar";
+import EditStudentApi from "./EditStudentApi";
 
 
 export default function Dashboard() {
@@ -114,7 +115,9 @@ export default function Dashboard() {
                   <CardFooter>
                     <Row>
                       <Col sm="6">
+                        <a href="editStu">
                         <Button>Edit</Button>
+                        </a>
                       </Col>
                       <Col sm="6">
                         <Button onClick={() => deleteStudentData(students.id)}>
